@@ -8,4 +8,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: show the trigger
-              run: echo "I have successfully triggered by ${{ github.event_name}}"
+              run: echo "I have successfully triggered by ${{github.event_name}}"
