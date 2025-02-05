@@ -1,0 +1,31 @@
+name: 03-workflow-runners.yaml
+
+on: 
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+    ubuntu-echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: show os
+              run: |
+                echo "running on ubuntu runner"
+                echo "os is $RUNNER_OS"
+    windows-echo:
+        runs-on: windows-latest
+        steps:
+            - name: show os 
+              shell: bash
+              run: |
+                echo "running on windows runner"
+                echo "os is $RUNNER_OS"             
+    mac-echo:
+        runs-on: macos-latest
+        steps:
+            - name: runs on mac
+              shell: bash
+              run: |
+                echo "running on mac runner"
+                echo "os is $RUNNER_OS"              
+                
