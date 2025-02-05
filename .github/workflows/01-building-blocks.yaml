@@ -1,0 +1,19 @@
+name: 01-building-blocks.yaml
+
+on: workflow_dispatch
+
+jobs:
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: say hello
+              run: echo "hello"
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: success
+              run: |
+                echo "I will exit"
+                exit 0
+            - name: say goodbye
+              run: echo "Goodbye"
